@@ -1,11 +1,104 @@
-* {
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: white;
+  background-color: #1f2029;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: white;
+  margin: 0;
+}
 
 .wrapper {
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100vh;
+  position: relative;
+  /* display: block; */
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+   /* max-width: calc(100%-40px); why this? */
+  width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.section-fluid {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  visibility: hidden;
+}
+
+.color-btn:checked + label,
+.color-btn:not(:checked) + label {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  transition: all 200ms linear;
+  overflow: hidden;
+  cursor: pointer;
+  color: #ffeba7;
+  margin-right: 10px;
+  box-shadow: 0 12px 35px 0 rgba(16, 9, 112, 0.25);
+  z-index: 10;
+  background-color: green;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+}
+
+.color-btn:checked + label {
+  border-color: #434343;
+  transform: scale(1.1);
+}
+
+label.color-1 {
+  margin-left: 500px;
+  background-image: url(images/color1.jpg);
+}
+
+label.color-2 {
+  background-image: url(images/color2.jpg);
+}
+
+label.color-3 {
+  background-image: url(images/color3.jpg);
+}
+
+label.color-4 {
+  background-image: url(images/color4.jpg);
+}
+
+label.color-5 {
+  background-image: url(images/color5.jpg);
+}
+
+label.color-6 {
+  background-image: url(images/color6.jpg);
 }
